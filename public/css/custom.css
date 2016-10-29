@@ -1,5 +1,5 @@
 header {
-  background-image: url(../images/1.jpg);
+  background-image: url(../acai_maos.jpg);
 }
 
 .navbar-custom.affix {
@@ -11,10 +11,15 @@ header {
   padding:2px 0;
 }
 
-.navbar-custom .nav li a {
-  color: #222;
+.navbar-custom {
+  background-color:#800080;
+  padding:15px;
 }
 
 img.hidden {
   display: none;
+}
+
+.affix-top #links > ul.nav {
+  padding-top: 18px;
 }
