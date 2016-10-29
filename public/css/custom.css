@@ -4,7 +4,8 @@ header {
 
 .navbar-custom.affix {
   background-color:#800080;
-  padding:10px 0
+  padding:10px 0;
+  font-size: 14px;
 }
 
 .logo {
@@ -14,6 +15,7 @@ header {
 .navbar-custom {
   background-color:#800080;
   padding:15px;
+  font-size: 20px;
 }
 
 img.hidden {
