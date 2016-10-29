@@ -23,3 +23,7 @@ img.hidden {
 .affix-top #links > ul.nav {
   padding-top: 18px;
 }
+
+section h3.section-subheading {
+  margin-bottom: 20px;
+}
