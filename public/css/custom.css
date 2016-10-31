@@ -13,9 +13,18 @@ header {
 }
 
 .navbar-custom {
-  background-color:#800080;
+  background-color:#fff;
   padding:15px;
   font-size: 20px;
+  text-decoration: #000;
+}
+
+.navbar-custom.affix-top .nav li a {
+  color: #800080;
+}
+
+body.not_index {
+  padding-top: 77px
 }
 
 img.hidden {
@@ -28,4 +37,12 @@ img.hidden {
 
 section h3.section-subheading {
   margin-bottom: 20px;
+}
+
+.leia-mais {
+  text-align: right;
+}
+
+form#contactForm {
+  height: 300px;
 }
