@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var product = require('./../models/product');
+var post = require('./../models/post');
+
+
 router.route('/')
   .get(function(req, res){
-    var products = product.get(function(data){
-      console.log(data[0]);
+    product.get(1,function(err,data,fields){
       res.render('contact');
     });
   });

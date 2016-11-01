@@ -4,49 +4,64 @@ class Model {
 
   constructor(table_name){
     this.table_name = table_name;
-    this.query_finish = false;
-  }
-
-//   findVid(callback) {
-//     for(var a = 0; a < videoIds.length; a++){
-//         if(videoIds){
-//             findVideo(videoIds[a], function(thumbnailPath, videoName){ // findVideo is the async function
-//                 // it returns 2 values, thumbnailPath and videoName
-//                 videoNames[a] = videoName; // and then these 2 values are written in the arrays
-//                 thumbnaildPaths[a] = thumbnailPath;
-//                 console.log('1');
-//                 if (callback) callback(); //This will be called once it has returned
-//             });
-//         }
-//     }
-// }
-  _execute_query(callback,query){
-    var result_rows = [];
-    this.query_finish = false;
-    db.query(query, function(err, rows, fields){
-      if(err) {
-        this.query_finish = true;
-        throw err;
+    this.fields = [];
+    var self = this;
+    var query = "SELECT * FROM "+ this.table_name+" limit 1; ";
+    this._execute_query(query, function(err, rows, fields){
+      var i = 0;
+      var length = fields.length;
+      for (i; i < length; i++){
+        self.fields.push(fields[i].name)
       }
-      if(callback) callback(rows, fields);
+      console.log(self.fields);
     });
 
+  }
+
+  _execute_query(query,callback){
+    db.query(query, function(err, rows, fields){
+      if(err) throw err;
+
+      callback(err, rows, fields);
+    });
   };
 
   getTableName(){
     return this.table_name;
   };
 
-  get(callback, id){
-    var query = 'SELECT * FROM '+this.table_name;
-    this._execute_query(callback,query);
+  getColumns(){
+    return this.fields;
+  }
+  get(id, callback){
+    var query = 'SELECT * FROM '+this.table_name+' WHERE id = '+db.escape(id)+' limit 1;';
+    console.log(query);
+    this._execute_query(query, function (err, data, fields) {
+      if (data.length > 0){
+        callback(err, data[0],fields);
+      }else{
+        callback(err, [],fields);
+      }
+    });
   };
 
-  where(column, value){
-    return "retorna um array com os item da tabela"
+  where(column, value, callback){
+    var query = 'SELECT * FROM '+this.table_name+' '+db.escape(column)+' = '+db.escape(value)+';';
+    console.log(query);
+
+    this._execute_query(query, function(err, data, fields){
+      if (data.length > 0){
+        callback(err, data[0],fields);
+      }else{
+        callback(err, [],fields);
+      }
+    });
+  };
+
+  save(){
+    var query = 'SELECT * FROM '+this.table_name+' '+db.escape(column)+' = '+db.escape(value)+';';
+    console.log(query);
   }
-
-
 
 }
 
