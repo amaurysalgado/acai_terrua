@@ -6,4 +6,4 @@ class  Product extends Model{
     return "função do produto";
   };
 };
-module.exports = new Product("product");
+module.exports = new Product("products");

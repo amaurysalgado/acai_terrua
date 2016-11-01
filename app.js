@@ -1,37 +1,36 @@
 'use strict';
 
 var port = process.env.port || 3000
-
 var express = require('express');
 var app = express();
 
 
-var morgan = require('morgan');
+/* set layout render */
 var expressLayouts = require('express-ejs-layouts');
-
-
-// set layout render
 app.set('view engine', 'ejs');
 app.set('layout', 'layouts/layout');
 app.use(expressLayouts);
 
-/* routes */
 
+/* console logs */
+var morgan = require('morgan');
 app.use(morgan('tiny'))
+
+
+/* public files */
 app.use(express.static(__dirname + '/public'));
 
+
+/* routes */
+var root_path = require('./routes/root');
 var contacts = require('./routes/contacts');
 var products = require('./routes/products');
+app.use('/', root_path);
 app.use('/contact', contacts);
 app.use('/products', products);
 
 
-app.get('/', function(req, res){
-  res.render('index');
-});
-
-
-
+/* start server in a specific port */
 app.listen(port, function(){
   console.log('Example app listening on port '+port+'!');
 });
