@@ -13,7 +13,6 @@ class Model {
       for (i; i < length; i++){
         self.fields.push(fields[i].name)
       }
-      console.log(self.fields);
     });
 
   }
