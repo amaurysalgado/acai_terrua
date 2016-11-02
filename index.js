@@ -1,6 +1,5 @@
 'use strict';
 
-var port = process.env.PORT || 3000
 var express = require('express');
 var app = express();
 
@@ -32,8 +31,4 @@ app.get('*', function(req, res){
 app.use('/contact', contacts);
 app.use('/products', products);
 
-
-/* start server in a specific port */
-app.listen(port, function(){
-  console.log('Example app listening on port '+port+'!');
-});
+module.exports = app;
