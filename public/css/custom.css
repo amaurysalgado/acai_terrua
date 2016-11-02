@@ -3,6 +3,14 @@ header {
   height: 900px
 }
 
+section {
+  padding-top: 80px;
+}
+
+label {
+  font-weight: 400;
+}
+
 .navbar-custom.affix {
   background-color:#800080;
   padding:10px 0;
@@ -30,6 +38,14 @@ body.not_index {
 
 img.hidden {
   display: none;
+}
+
+footer {
+  background-color: #dbd6db;
+}
+
+.spacer-20 {
+  padding-top: 20px;
 }
 
 .affix-top #links > ul.nav {
