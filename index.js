@@ -1,6 +1,6 @@
 'use strict';
 
-var port = process.env.port || 3000
+var port = process.env.PORT || 3000
 var express = require('express');
 var app = express();
 
@@ -26,6 +26,9 @@ var root_path = require('./routes/root');
 var contacts = require('./routes/contacts');
 var products = require('./routes/products');
 app.use('/', root_path);
+app.get('*', function(req, res){
+  res.redirect('/');
+});
 app.use('/contact', contacts);
 app.use('/products', products);
 

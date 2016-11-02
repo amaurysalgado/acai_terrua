@@ -31,11 +31,12 @@ class Model {
 
   getColumns(){
     return this.fields;
-  }
+  };
+
   get(id, callback){
     var query = 'SELECT * FROM '+this.table_name+' WHERE id = '+db.escape(id)+' limit 1;';
-    console.log(query);
     this._execute_query(query, function (err, data, fields) {
+      console.log(query);
       if (data.length > 0){
         callback(err, data[0],fields);
       }else{
@@ -46,9 +47,9 @@ class Model {
 
   where(column, value, callback){
     var query = 'SELECT * FROM '+this.table_name+' '+db.escape(column)+' = '+db.escape(value)+';';
-    console.log(query);
 
     this._execute_query(query, function(err, data, fields){
+      console.log(query);
       if (data.length > 0){
         callback(err, data[0],fields);
       }else{
@@ -57,9 +58,27 @@ class Model {
     });
   };
 
-  save(){
-    var query = 'SELECT * FROM '+this.table_name+' '+db.escape(column)+' = '+db.escape(value)+';';
-    console.log(query);
+  insert(data, callback){
+    var fields_to_set = [];
+    var key = "";
+    var fields = this.getColumns();
+    for (key in data){
+      // console.log(this.fields.contains("name"));
+      if (this.fields.includes(key)){
+        fields_to_set.push(key+" = "+ db.escape(data[key]));
+      }
+    }
+
+    if(fields_to_set.length > 0){
+      var query = "INSERT INTO "+this.table_name+" SET ";
+      fields_to_set = fields_to_set.join(", ");
+      query = query+fields_to_set;
+      console.log(query);
+      this._execute_query(query, callback);
+    }else {
+      callback(false, [])
+    }
+
   }
 
 }
