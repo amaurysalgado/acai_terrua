@@ -62,3 +62,11 @@ section h3.section-subheading {
 form#contactForm {
   height: 300px;
 }
+
+input:invalid {
+  border: 1px solid red;
+}
+
+textarea:invalid {
+  border: 1px solid red;
+}

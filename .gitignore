@@ -1,2 +1,3 @@
 node_modules
 start_server.sh
+lib/email_config.js
