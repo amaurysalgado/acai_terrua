@@ -33,7 +33,7 @@ var contacts = require('./routes/contacts');
 var products = require('./routes/products');
 app.use('/', root_path);
 app.use('/contact', contacts);
-app.use('/products', products);
+// app.use('/products', products);
 
 // redirect to root undefined routs
 app.get('*', function(req, res){
