@@ -2,8 +2,16 @@ header {
   background-image: url(../acai_maos.jpg);
 }
 
+header .intro-heading{
+  margin-top: 40px;
+}
+
 section {
   padding-top: 80px;
+}
+
+.contact-form{
+  height: 400px;
 }
 
 label {

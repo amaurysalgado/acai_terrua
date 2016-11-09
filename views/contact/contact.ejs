@@ -7,10 +7,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-12">
-        <form name="sentMessage" id="contactForm"  action="/contact/sendemail" method="POST">
-          <div class="row">
-            <div class="col-md-7">
+      <div class="col-lg-7" >
+        <div class="row contact-form">
+          <form name="sentMessage" id="contactForm"  action="/contact/sendemail" method="POST">
+            <div class="col-md-12">
               <div class="form-group">
                 <label for="name">* Nome: </label>
                 <input id="name" name="name" type="text" class="form-control" required >
@@ -31,25 +31,24 @@
                 <textarea id="message" name="message" class="form-control" required></textarea>
                 <p class="help-block text-danger"></p>
               </div>
-            </div>
-            <div class="col-md-4 spacer-20">
-              <div class="panel panel-default">
-                <div class="panel-body">
-                  <p>Endereço: Vila São Paulo - S/N Fazenda Açaí Terruá - Sta Maria do Pará</p>
-                  <p>Cidade: Belém - PA</p>
-                  <p>CEP: 66000-000</p>
-                  <p>Telefone: (91) 9883-95753 | (61) 999466730</p>
-                  <p>E-mail: contato@acaiterrua.com.br</p>
-                </div>
+              <div class="form-group">
+                <div id="success"></div>
+                <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
               </div>
             </div>
-            <div class="clearfix"></div>
-            <div class="col-lg-12">
-              <div id="success"></div>
-              <button type="submit" class="btn btn-xl">Enviar Mensagem</button>
-            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4 spacer-20">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p>Endereço: Vila São Paulo - S/N Fazenda Açaí Terruá - Sta Maria do Pará</p>
+            <p>Cidade: Belém - PA</p>
+            <p>CEP: 66000-000</p>
+            <p>Telefone: (91) 9883-95753 | (61) 999466730</p>
+            <p>E-mail: contato@acaiterrua.com.br</p>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
