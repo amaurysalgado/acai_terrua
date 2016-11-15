@@ -9,17 +9,17 @@
     <div class="row">
       <div class="col-lg-7" >
         <div class="row contact-form">
-          <form name="sentMessage" id="contactForm"  action="/contact/sendemail" method="POST">
+          <form name="sentMessage" id="contactForm" novalidate action="/contact/sendemail" method="POST">
             <div class="col-md-12">
               <div class="form-group">
                 <label for="name">* Nome: </label>
-                <input id="name" name="name" type="text" class="form-control" required >
+                <input id="name" name="name" type="text" class="form-control" >
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
                 <label for="email">* Email: </label>
-                <input  id="email" name="email" type="email" class="form-control" required>
-                <p class="help-block text-danger"></p>
+                <input  id="email" name="email" type="email" class="form-control">
+                <p class="help-block invalid_label email"></p>
               </div>
               <div class="form-group">
                 <label for="phone"> Telefone: </label>
@@ -28,7 +28,7 @@
               </div>
               <div class="form-group">
                 <label for="message">* Mensagem: </label>
-                <textarea id="message" name="message" class="form-control" required></textarea>
+                <textarea id="message" name="message" class="form-control"></textarea>
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">

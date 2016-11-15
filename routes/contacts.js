@@ -24,12 +24,12 @@ router.route('/sendemail')
         '<b>telefone:</b> '+req.body.phone+'<br/>'+
         '<b>mensagem:</b> '+req.body.message+'<br/>'
     };
-    transporter.sendMail(mailOptions,function(error, info){
-      if(error){
-        console.log(error);
-      }
+    // transporter.sendMail(mailOptions,function(error, info){
+    //   if(error){
+    //     console.log(error);
+    //   }
       console.log("email sent")
-    });
+    // });
 
     res.redirect('/contact');
   });
