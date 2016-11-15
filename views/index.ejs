@@ -15,7 +15,16 @@
   </head>
 
   <body id="page-top" class="index">
-
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top affix-top">
       <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,6 +47,9 @@
             </li>
             <li>
               <a class="page-scroll" href="#products">Produto</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#social">Social</a>
             </li>
             <li>
               <a class="page-scroll" href="/contact">Contato</a>
@@ -117,6 +129,46 @@
         </div>
         <div class="row">
           Em breve...
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Social</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="col-md-6">
+              <div class="text-center">
+                <div class="fb-page" data-href="https://www.facebook.com/acaiterrua" data-tabs="timeline" data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                  <blockquote cite="https://www.facebook.com/acaiterrua" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/acaiterrua">Açaí Terruá</a>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <blockquote class="instagram-media instagram" data-instgrm-version="7">
+                <div style="padding:8px;">
+                  <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
+                    <div>
+                    </div>
+                  </div>
+                  <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                    <a href="https://www.instagram.com/p/BLZ3X-ijwBr/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">
+                      A photo posted by Açaí Terruá- Brasília\Pará (@acaiterrua)
+                    </a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-10-28T14:00:57+00:00">Oct 28, 2016 at 7:00am PDT</time>
+                  </p>
+                </div>
+              </blockquote>
+              <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

@@ -71,10 +71,10 @@ form#contactForm {
   height: 300px;
 }
 
-input:invalid {
-  border: 1px solid red;
+.invalid_label{
+  color: red;
 }
 
-textarea:invalid {
+.invalid {
   border: 1px solid red;
 }
