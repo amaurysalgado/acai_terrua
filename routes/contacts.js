@@ -28,9 +28,9 @@ router.route('/sendemail')
       if(error){
         console.log(error);
       }
-      console.log("email sent")
-      res.redirect('/contact');
+      console.log("email sent");
     });
+    res.redirect('/contact');
   });
 
 module.exports = router;
