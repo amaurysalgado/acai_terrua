@@ -31,9 +31,10 @@ app.use(express.static(__dirname + '/public'));
 var root_path = require('./routes/root');
 var contacts = require('./routes/contacts');
 var products = require('./routes/products');
+var galery = require('./routes/galery');
 app.use('/', root_path);
 app.use('/contact', contacts);
-// app.use('/products', products);
+app.use('/galery', galery);
 
 // redirect to root undefined routs
 app.get('*', function(req, res){

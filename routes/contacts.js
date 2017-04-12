@@ -2,11 +2,11 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
-var smtpTransport = require('nodemailer-smtp-transport');
-var email_comfig = require("./../lib/email_config")
+// var smtpTransport = require('nodemailer-smtp-transport');
+// var email_comfig = require("./../lib/email_config")
 
 
-var transporter = nodemailer.createTransport(email_comfig);
+var transporter = nodemailer.createTransport();
 
 
 router.route('/')
