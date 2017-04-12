@@ -78,3 +78,13 @@ form#contactForm {
 .invalid {
   border: 1px solid red;
 }
+
+img.galery{
+  height: 250px;
+  width: auto;
+}
+
+div.row{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
