@@ -13,7 +13,7 @@ router.route('/')
         photos.push(files);
         files = temp
       }
-      res.render('galery/index', {photos: photos });
+      res.render('gallery/index', {photos: photos });
     });
   });
 

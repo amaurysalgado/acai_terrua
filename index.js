@@ -31,10 +31,10 @@ app.use(express.static(__dirname + '/public'));
 var root_path = require('./routes/root');
 var contacts = require('./routes/contacts');
 var products = require('./routes/products');
-var galery = require('./routes/galery');
+var gallery = require('./routes/gallery');
 app.use('/', root_path);
 app.use('/contact', contacts);
-app.use('/galery', galery);
+app.use('/gallery', gallery);
 
 // redirect to root undefined routs
 app.get('*', function(req, res){
