@@ -6,5 +6,4 @@ router.route('/')
     res.render('index',{layout: false, index: true});
   });
 
-
 module.exports = router;

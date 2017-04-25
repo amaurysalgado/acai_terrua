@@ -5,9 +5,7 @@ var nodemailer = require('nodemailer');
 // var smtpTransport = require('nodemailer-smtp-transport');
 // var email_comfig = require("./../lib/email_config")
 
-
 var transporter = nodemailer.createTransport();
-
 
 router.route('/')
   .get(function(req, res){
