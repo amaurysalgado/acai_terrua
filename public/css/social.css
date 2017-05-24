@@ -12,19 +12,6 @@
   width:calc(100% - 2px);
 }
 
-/*blockquote.instagram > div {
-  padding:8px;
-}
-
-blockquote.instagram > div > div {
-   background:#F8F8F8;
-   line-height:0;
-   margin-top:40px;
-   padding:50.0% 0;
-   text-align:center;
-   width:100%;
- }*/
-
 .instagram > div > div > div {
   background:url(data:image/png;BORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC);
   display:block;

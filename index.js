@@ -32,9 +32,11 @@ var root_path = require('./routes/root');
 var contacts = require('./routes/contacts');
 var products = require('./routes/products');
 var gallery = require('./routes/gallery');
+var sustentability = require('./routes/sustentability');
 app.use('/', root_path);
 app.use('/contact', contacts);
 app.use('/gallery', gallery);
+app.use('/sustentability', sustentability);
 
 // redirect to root undefined routs
 app.get('*', function(req, res){
